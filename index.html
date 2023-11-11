@@ -9,6 +9,10 @@
             color: white;
             text-align: center;
             padding: 50px;
+            position: relative;
+            /* Added to contain the animated div */
+            overflow: hidden;
+            /* Added to prevent scrollbar */
         }
 
         h1 {
@@ -19,12 +23,38 @@
         p {
             font-size: 1.5em;
         }
+
+        /* New CSS rule for the animated div */
+        .animated-div {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            animation: moveRight 2s linear infinite;
+        }
+
+        /* CSS animation */
+        @keyframes moveRight {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <h1 onclick="changeText(this)">Hello World</h1>
     <p>I'm hosted with GitHub Pages.</p>
+
+    <!-- New div for the animation -->
+    <div class="animated-div"></div>
 
     <script>
         function changeText(element) {
