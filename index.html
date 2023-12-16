@@ -1,66 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html dir="auto" lang="en">
 
 <head>
-    <style>
-        body {
-            background: linear-gradient(to right, #1f4037, #99f2c8);
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            padding: 50px;
-            position: relative;
-            /* Added to contain the animated div */
-            overflow: hidden;
-            /* Added to prevent scrollbar */
-        }
+	<meta charset="UTF-8" />
+	<title>Flatland Empire</title>
 
-        h1 {
-            font-size: 3em;
-            cursor: pointer;
-        }
+	<meta name="description" content="Flatland Empire" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="assets/favicon0.png" />
 
-        p {
-            font-size: 1.5em;
-        }
+	<meta property="og:title" content="Flatland Empire" />
+	<meta property="og:description" content="Build Your City" />
+	<meta property="og:image" content="assets/og-image.png" />
 
-        /* New CSS rule for the animated div */
-        .animated-div {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            background: white;
-            border-radius: 50%;
-            animation: moveRight 2s linear infinite;
-        }
+	<link rel="stylesheet" href="assets/tobi.css" />
+	<link rel="stylesheet" href="assets/style.css" />
 
-        /* CSS animation */
-        @keyframes moveRight {
-            from {
-                left: 0;
-            }
-
-            to {
-                left: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <h1 onclick="changeText(this)">Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+	<main>
+		<header class="app__header container">
+			<div class="app__logo-wrapper"> <img class="app__logo" src="assets/AppIcon.png" alt="Flatland Empire"></div>
+			<div class="app__infos">
+				<h1 class="app__name">Flatland Empire</h1>
+				<p class="app__description">Build Your City</p>
+				<div class="app__buttons app__buttons--desktop">
+					<!--
+			<a href="https://play.google.com/store" class="app__button-play" target="_blank" title="Get on Google Play">
+				<img src="assets/google-play-badge.png" alt="Get on Google Play">
+			</a>
+			-->
+					<a href="https://www.apple.com/ios/app-store/" class="app__button-ios" target="_blank"
+						title="Get on Appstore">
+						<img src="assets/ios-badge.svg" alt="Get on Appstore">
+					</a>
+					<!--
+			<a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
+				<img src="assets/pwa-badge.png" alt="Go to website">
+			</a>
+			-->
+				</div>
+			</div>
+		</header>
+		<div class="app__buttons app__buttons--mobile container">
+			<a href="https://play.google.com/store" class="app__button-play" target="_blank" title="Get on Google Play">
+				<img src="assets/google-play-badge.png" alt="Get on Google Play">
+			</a>
+			<a href="https://www.apple.com/ios/app-store/" class="app__button-ios" target="_blank"
+				title="Get on Appstore">
+				<img src="assets/ios-badge.svg" alt="Get on Appstore">
+			</a>
+			<a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
+				<img src="assets/pwa-badge.png" alt="Go to website">
+			</a>
+		</div>
+		<section class="app__screenshots app__section">
+			<div class="container">
+				<h2 class="app__section-title">Screenshots</h2>
+			</div>
+			<div class="app__screenshots-wrapper container-desktop">
+				<div class="app__screenshots-list">
+					<a href="assets/1.png" class="lightbox">
+						<img src="assets/1.png" class="app__screenshot" alt="" />
+					</a>
+					<a href="assets/2.png" class="lightbox">
+						<img src="assets/2.png" class="app__screenshot" alt="" />
+					</a>
+					<a href="assets/3.png" class="lightbox">
+						<img src="assets/3.png" class="app__screenshot" alt="" />
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="app__fulldescription app__section container">
+			<h2 class="app__section-title">Description</h2>
+			<div class="app__fulldescription-content">
+				<h2>Flatland Empire: Build Your Dream City</h2>
 
-    <!-- New div for the animation -->
-    <div class="animated-div"></div>
+				<p><strong>Welcome to Flatland Empire, a charming and addictive city builder game where you
+						can:</strong></p>
 
-    <script>
-        function changeText(element) {
-            element.textContent = "You clicked me!";
-        }
-    </script>
+				<ul>
+					<li><strong>Craft your dream city from the ground up:</strong> Build houses, businesses, and more,
+						all in a beautiful 2D low poly style.</li>
+					<li><strong>Unleash your inner entrepreneur:</strong> Manage various businesses, invest in real
+						estate, and watch your city's economy flourish.</li>
+					<li><strong>Become a traffic tycoon:</strong> Design efficient transportation to keep your
+						citizens happy and your city humming.</li>
+					<li><strong>Embrace the visual feast:</strong> Immerse yourself in the stunning low poly graphics
+						and watch your city come alive.</li>
+					<li><strong>Play at your own pace:</strong> Enjoy casual, relaxing gameplay with no pressure to
+						rush.</li>
+					<li><strong>Collect and upgrade buildings:</strong> Unlock new buildings and upgrades to expand your
+						city's potential.</li>
+				</ul>
+
+				<p><strong>Flatland Empire is the perfect game for anyone who loves city builders, idle games, or simply
+						enjoys watching their creations come to life.</strong></p>
+
+				<p><strong>What are you waiting for? Download Flatland Empire today and start building your dream
+						city!</strong></p>
+			</div>
+		</section>
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__container">
+				<p class="footer__love">
+					<script>document.write('&copy;' + (new Date()).getFullYear());</script>
+					<noscript>&copy;2023</noscript> All rights reserved
+					&mdash; Tobias Vontobel
+				</p>
+				<ul class="footer__links">
+					<li class="footer__link">
+						<a href="page-1.html">Privacy</a>
+					</li>
+					<li class="footer__link">
+						<a href="mailto:flatland.team@gmail.com">Contact</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="assets/tobi.min.js" />
+	</script>
+	<script>
+		window.onload = function () {
+			var tobi = new Tobi();
+		};
+	</script>
+
 </body>
 
 </html>
