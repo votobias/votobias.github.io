@@ -1,143 +1,50 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<title>Flatland Empire</title>
-
-	<meta name="description" content="Flatland Empire" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="icon" href="assets/favicon0.png" />
-
-	<meta property="og:title" content="Flatland Empire" />
-	<meta property="og:description" content="Build Your City" />
-	<meta property="og:image" content="assets/og-image.png" />
-
-	<link rel="stylesheet" href="assets/tobi.css" />
-	<link rel="stylesheet" href="assets/style.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias Vontobel - Machine Learning Engineer</title>
+    <meta name="description" content="Machine Learning Engineer & Researcher specializing in generative AI, diffusion models, and computer vision. Research experience at Disney Research Studios.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-	<main>
-		<header class="app__header container">
-			<div class="app__logo-wrapper"> <img class="app__logo" src="assets/AppIcon.png" alt="Flatland Empire"></div>
-			<div class="app__infos">
-				<h1 class="app__name">Flatland Empire</h1>
-				<p class="app__description">Build Your City</p>
-				<div class="app__buttons app__buttons--desktop">
-					<!--
-			<a href="https://play.google.com/store" class="app__button-play" target="_blank" title="Get on Google Play">
-				<img src="assets/google-play-badge.png" alt="Get on Google Play">
-			</a>
-			-->
-					<a href="https://apps.apple.com/us/app/flatland-empire/id6474484919" class="app__button-ios"
-						target="_blank" title="Get on Appstore">
-						<img src="assets/ios-badge.svg" alt="Get on Appstore">
-					</a>
-					<!--
-			<a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
-				<img src="assets/pwa-badge.png" alt="Go to website">
-			</a>
-			-->
-				</div>
-			</div>
-		</header>
-		<div class="app__buttons app__buttons--mobile container">
-			<!--
-			<a href="https://play.google.com/store" class="app__button-play" target="_blank" title="Get on Google Play">
-				<img src="assets/google-play-badge.png" alt="Get on Google Play">
-			</a>
-			-->
-			<a href="https://apps.apple.com/us/app/flatland-empire/id6474484919" class="app__button-ios" target="_blank"
-				title="Get on Appstore">
-				<img src="assets/ios-badge.svg" alt="Get on Appstore">
-			</a>
-			<!--
-			<a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
-				<img src="assets/pwa-badge.png" alt="Go to website">
-			</a>
-			-->
-		</div>
-		<section class="app__screenshots app__section">
-			<div class="container">
-				<h2 class="app__section-title">Screenshots</h2>
-			</div>
-			<div class="app__screenshots-wrapper container-desktop">
-				<div class="app__screenshots-list">
-					<a href="assets/1.png" class="lightbox">
-						<img src="assets/1.png" class="app__screenshot" alt="" />
-					</a>
-					<a href="assets/2.png" class="lightbox">
-						<img src="assets/2.png" class="app__screenshot" alt="" />
-					</a>
-					<a href="assets/3.png" class="lightbox">
-						<img src="assets/3.png" class="app__screenshot" alt="" />
-					</a>
-				</div>
-			</div>
-		</section>
-		<section class="app__fulldescription app__section container">
-			<h2 class="app__section-title">Description</h2>
-			<div class="app__fulldescription-content">
-				<h2>Flatland Empire: Build Your Dream City</h2>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">tobias@portfolio:~$</div>
+        </div>
+        
+        <div class="terminal-content">
+            <div class="initial-line" id="initial-line">
+                <span class="prompt">tobias@portfolio:~$</span>
+                <span class="typed-command" id="typed-command"></span>
+                <span class="cursor" id="main-cursor">|</span>
+            </div>
+            
+            <div class="animated-content" id="animated-content" style="display: none;">
+                <!-- Content will be dynamically added here -->
+            </div>
 
-				<p><strong>Welcome to Flatland Empire, a charming and addictive city builder game where you
-						can:</strong></p>
+            <div class="interactive-section" id="interactive-section" style="display: none;">
+                <div class="terminal-line">
+                    <span class="prompt">tobias@portfolio:~$</span>
+                    <span class="input-area">
+                        <input type="text" id="command-input" placeholder="Type 'help' for available commands">
+                        <span class="cursor-input">|</span>
+                    </span>
+                </div>
+                <div id="command-output"></div>
+            </div>
+        </div>
+    </div>
 
-				<ul>
-					<li><strong>Craft your dream city from the ground up:</strong> Build houses, businesses, and more,
-						all in a beautiful 2D low poly style.</li>
-					<li><strong>Unleash your inner entrepreneur:</strong> Manage various businesses, invest in real
-						estate, and watch your city's economy flourish.</li>
-					<li><strong>Become a traffic tycoon:</strong> Design efficient transportation to keep your
-						citizens happy and your city humming.</li>
-					<li><strong>Embrace the visual feast:</strong> Immerse yourself in the stunning low poly graphics
-						and watch your city come alive.</li>
-					<li><strong>Play at your own pace:</strong> Enjoy casual, relaxing gameplay with no pressure to
-						rush.</li>
-					<li><strong>Collect and upgrade buildings:</strong> Unlock new buildings and upgrades to expand your
-						city's potential.</li>
-				</ul>
-
-				<p><strong>Flatland Empire is the perfect game for anyone who loves city builders, idle games, or simply
-						enjoys watching their creations come to life.</strong></p>
-
-				<p><strong>What are you waiting for? Download Flatland Empire today and start building your dream
-						city!</strong></p>
-			</div>
-		</section>
-
-	</main>
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__container">
-				<p class="footer__love">
-					<script>document.write('&copy;' + (new Date()).getFullYear());</script>
-					<noscript>&copy;2023</noscript> All rights reserved
-					&mdash; Tobias Vontobel
-				</p>
-				<ul class="footer__links">
-					<li class="footer__link">
-						<a href="page-1.html">Privacy</a>
-					</li>
-					<li class="footer__link">
-						<a href="mailto:flatland.team@gmail.com">Contact</a>
-					</li>
-
-				</ul>
-			</div>
-		</div>
-	</footer>
-
-	<script type="text/javascript" src="assets/tobi.min.js" />
-	</script>
-	<script>
-		window.onload = function () {
-			var tobi = new Tobi();
-		};
-	</script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
