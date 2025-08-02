@@ -123,14 +123,9 @@ body {
 
 .cursor {
     color: var(--text-primary);
-    animation: blink 1s infinite;
     font-weight: bold;
 }
 
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
-}
 
 .ascii-art {
     color: var(--accent-purple);
@@ -361,7 +356,6 @@ input[type="text"]:disabled {
 
 .cursor-input {
     color: var(--text-primary);
-    animation: blink 1s infinite;
     margin-left: 5px;
 }
 
@@ -468,4 +462,16 @@ input[type="text"]:disabled {
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
+}
+
+.copyright-notice {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0.7;
 }

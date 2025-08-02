@@ -69,6 +69,14 @@ class TerminalPortfolio {
                         tags: '[Computer Vision, Diffusion Models, Wavelets]'
                     },
                     {
+                        title: 'Guidance in the Frequency Domain Enables High-Fidelity Sampling at Low CFG Scales',
+                        authors: 'Seyedmorteza Sadat, Tobias Vontobel, Farnood Salehi, Romann M. Weber',
+                        venue: 'arXiv:2506.19713 [cs.CV] • 2025',
+                        description: 'Advanced guidance techniques in frequency domain for improved diffusion model sampling with reduced computational requirements.',
+                        link: 'https://arxiv.org/abs/2506.19713',
+                        tags: '[Diffusion Models, Frequency Domain, CFG]'
+                    },
+                    {
                         title: 'Breaking reCAPTCHAv2',
                         authors: 'Andreas Plesner, Tobias Vontobel, Roger Wattenhofer',
                         venue: 'arXiv:2409.08831 [cs.CR] • 2024',
@@ -76,14 +84,6 @@ class TerminalPortfolio {
                         link: 'https://arxiv.org/abs/2409.08831',
                         github: 'https://github.com/aplesner/Breaking-reCAPTCHAv2',
                         tags: '[Security, CAPTCHA, Machine Learning]'
-                    },
-                    {
-                        title: 'Guidance in the Frequency Domain Enables High-Fidelity Sampling at Low CFG Scales',
-                        authors: 'Seyedmorteza Sadat, Tobias Vontobel, Farnood Salehi, Romann M. Weber',
-                        venue: 'arXiv:2506.19713 [cs.CV] • 2025',
-                        description: 'Advanced guidance techniques in frequency domain for improved diffusion model sampling with reduced computational requirements.',
-                        link: 'https://arxiv.org/abs/2506.19713',
-                        tags: '[Diffusion Models, Frequency Domain, CFG]'
                     }
                 ]
             },
