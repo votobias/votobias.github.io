@@ -31,7 +31,8 @@ class TerminalPortfolio {
             arxiv: () => {
                 window.open('https://arxiv.org/search/cs?searchtype=author&query=Vontobel%2C+T', '_blank');
                 return 'Opening arXiv author profile...';
-            }
+            },
+            privacy: () => this.showPrivacy()
         };
         
         this.contentSections = [
@@ -619,6 +620,7 @@ github    - Open my GitHub profile
 linkedin  - Open my LinkedIn profile
 email     - Send me an email
 arxiv     - Open my arXiv author profile
+privacy   - View privacy policy and analytics info
 
 Navigation:
 ↑/↓ arrows - Navigate command history
@@ -741,6 +743,49 @@ Feel free to reach out for:
 • Academic partnerships
 
 I'm always interested in discussing cutting-edge AI research and innovative applications!`;
+    }
+
+    showPrivacy() {
+        return `Privacy Policy & Analytics Information:
+
+📊 ANALYTICS
+This website uses Counter.dev for minimal, privacy-focused analytics.
+Counter.dev is a free, lightweight analytics service that:
+
+✓ Does NOT use cookies
+✓ Does NOT track individual users
+✓ Does NOT collect personal data
+✓ Fully GDPR compliant
+
+📈 WHAT WE TRACK:
+• Total page views
+• Unique visitor count (via hash, not IP)
+• Country of origin
+• Referrer source
+• Screen resolution
+• User agent (browser/OS type)
+
+🔒 YOUR PRIVACY:
+• No IP addresses are stored
+• No personal information is collected
+• No tracking across websites
+• No consent banner needed (GDPR compliant)
+• Data is aggregated and anonymous
+
+📝 DATA USAGE:
+Analytics data helps me:
+• Understand portfolio reach
+• See which content resonates
+• Track visitor geography for professional networking
+• Improve website performance
+
+🚫 BLOCKING:
+You can block Counter.dev using any ad blocker or by adding
+cdn.counter.dev to your hosts file or DNS blocker.
+
+For more info: https://counter.dev/privacy
+
+Your privacy is respected. This is a professional portfolio, not a data collection site.`;
     }
 
     clearOutput() {
