@@ -472,6 +472,18 @@ input[type="text"]:disabled {
     color: var(--text-muted);
     font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
     z-index: 1000;
-    pointer-events: none;
+    pointer-events: auto;
     opacity: 0.7;
+}
+
+.copyright-notice .footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.copyright-notice .footer-link:hover {
+    color: var(--accent-blue);
+    text-decoration: underline;
 }

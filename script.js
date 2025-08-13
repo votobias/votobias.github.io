@@ -748,16 +748,16 @@ I'm always interested in discussing cutting-edge AI research and innovative appl
     showPrivacy() {
         return `Privacy Policy & Analytics Information:
 
-📊 ANALYTICS
+ANALYTICS
 This website uses Counter.dev for minimal, privacy-focused analytics.
 Counter.dev is a free, lightweight analytics service that:
 
-✓ Does NOT use cookies
-✓ Does NOT track individual users
-✓ Does NOT collect personal data
-✓ Fully GDPR compliant
+• Does NOT use cookies
+• Does NOT track individual users
+• Does NOT collect personal data
+• Fully GDPR compliant
 
-📈 WHAT WE TRACK:
+WHAT WE TRACK:
 • Total page views
 • Unique visitor count (via hash, not IP)
 • Country of origin
@@ -765,21 +765,21 @@ Counter.dev is a free, lightweight analytics service that:
 • Screen resolution
 • User agent (browser/OS type)
 
-🔒 YOUR PRIVACY:
+YOUR PRIVACY:
 • No IP addresses are stored
 • No personal information is collected
 • No tracking across websites
 • No consent banner needed (GDPR compliant)
 • Data is aggregated and anonymous
 
-📝 DATA USAGE:
+DATA USAGE:
 Analytics data helps me:
 • Understand portfolio reach
 • See which content resonates
 • Track visitor geography for professional networking
 • Improve website performance
 
-🚫 BLOCKING:
+BLOCKING:
 You can block Counter.dev using any ad blocker or by adding
 cdn.counter.dev to your hosts file or DNS blocker.
 
@@ -842,7 +842,34 @@ Your privacy is respected. This is a professional portfolio, not a data collecti
 
 // Initialize the terminal when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new TerminalPortfolio();
+    const terminal = new TerminalPortfolio();
+    
+    // Handle privacy link click
+    const privacyLink = document.getElementById('privacy-link');
+    if (privacyLink) {
+        privacyLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // If animation is still running, wait for it to finish
+            if (terminal.isAnimating) {
+                return;
+            }
+            
+            // Execute privacy command
+            const commandInput = document.getElementById('command-input');
+            if (commandInput) {
+                commandInput.value = 'privacy';
+                terminal.processCommand('privacy');
+                commandInput.value = '';
+                
+                // Scroll to terminal
+                document.querySelector('.terminal-container').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        });
+    }
 });
 
 // Add some keyboard shortcuts
